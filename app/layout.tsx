@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { Analytics } from '@vercel/analytics/react';
+
 import { inter } from '&/app/fonts';
 import { Footer } from '&/components/footer';
 import Navigation from '&/components/navigation';
@@ -14,6 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navigation />
         <main className="container mx-auto my-24 px-8">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
