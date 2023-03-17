@@ -49,7 +49,7 @@ export default function Home(): JSX.Element {
         </p>
 
         <Link href="/resume.pdf" target="_blank">
-          <Button>
+          <Button as="span">
             <FeatherLink className="mr-2" size={18} /> View My Resume
           </Button>
         </Link>
@@ -159,7 +159,7 @@ export default function Home(): JSX.Element {
       <section className="py-6 lg:py-20 lg:px-24">
         <h2 className="mb-8 text-3xl font-bold lg:text-5xl">Other Work</h2>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3">
           <SmallFigure
             title="Raverbot"
             description="Raver the Discord role saver keeps a server pain-free by storing user roles in a database so you'll never have to spend time

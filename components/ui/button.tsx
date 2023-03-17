@@ -1,4 +1,4 @@
-import { forwardRef, type ButtonHTMLAttributes } from 'react';
+import { forwardRef, type ButtonHTMLAttributes, type LegacyRef } from 'react';
 
 import { VariantProps, cva } from 'class-variance-authority';
 
@@ -30,11 +30,41 @@ const buttonVariants = cva(
   },
 );
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {}
+export interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement | HTMLSpanElement>,
+    VariantProps<typeof buttonVariants> {
+  as?: 'button' | 'a' | 'span';
+}
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, ...props }, ref) => {
-  return <button className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
-});
+const Button = forwardRef<ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement | HTMLSpanElement>, ButtonProps>(
+  ({ className, variant, size, as, ...props }, ref) => {
+    if (as === 'button') {
+      return (
+        <button
+          className={cn(buttonVariants({ variant, size, className }))}
+          ref={ref as LegacyRef<HTMLButtonElement>}
+          {...props}
+        />
+      );
+    } else if (as === 'a') {
+      return (
+        <a
+          className={cn(buttonVariants({ variant, size, className }))}
+          ref={ref as LegacyRef<HTMLAnchorElement>}
+          {...props}
+        />
+      );
+    } else {
+      return (
+        <span
+          className={cn(buttonVariants({ variant, size, className }))}
+          ref={ref as LegacyRef<HTMLSpanElement>}
+          {...props}
+        />
+      );
+    }
+  },
+);
 
 Button.displayName = 'Button';
 

@@ -20,7 +20,7 @@ export function SmallFigure({ title, description, link, src, alt }: SmallFigureP
   return (
     <Link className="mb-4 flex flex-col items-center justify-center text-center" href={link} target="_blank">
       <motion.div
-        className="border-b border-b-gray-200 py-8 last:border-b-0"
+        className="border-b border-b-gray-200 py-4 last:border-b-0 lg:py-8"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.3 }}>
