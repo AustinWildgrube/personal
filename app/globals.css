@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+ @apply box-border p-0 m-0;
+}
+
+html,
+body {
+  @apply overflow-x-hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading text-slate-900;
+}
+
+p,
+span,
+figcaption {
+  @apply text-slate-500;
+}
+
+a {
+  @apply text-inherit no-underline;
+}
+
