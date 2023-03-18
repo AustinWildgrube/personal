@@ -67,6 +67,11 @@ export default function Enfront(): JSX.Element {
           />
           <figcaption className="mt-2 text-center">Enfront&apos;s Fullstack Architecture</figcaption>
         </figure>
+
+        <figure className="cursor-zoom-in">
+          <Zoom src="/screenshots/enfront/enfront-theme.png" alt="The Enfront default shop theme" />
+          <figcaption className="mt-2 text-center">Enfront&apos;s Default Shop Theme</figcaption>
+        </figure>
       </div>
     </div>
   );
