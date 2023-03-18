@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
-import { Link as FeatherLink } from 'react-feather';
+import { GitHub } from 'react-feather';
 
 import { cardVariants } from '&/lib/utils';
 
@@ -34,7 +34,7 @@ export function SmallFigure({ title, description, link, src, alt }: SmallFigureP
           />
 
           <h3 className="mr-2 flex items-center justify-center gap-2 text-xl font-semibold">
-            {title} <FeatherLink size={18} />
+            {title} <GitHub size={18} />
           </h3>
 
           <p className="px-6">{description}</p>
