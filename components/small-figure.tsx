@@ -34,7 +34,7 @@ export function SmallFigure({ title, description, link, src, alt }: SmallFigureP
           />
 
           <h3 className="mr-2 flex items-center justify-center gap-2 text-xl font-semibold">
-            {title} <GitHub size={18} />
+            {title} <GitHub size={18} aria-label={`Go to ${title}'s Github repository`} />
           </h3>
 
           <p className="px-6">{description}</p>

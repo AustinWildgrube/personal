@@ -66,19 +66,19 @@ export function Figure({
               <div className="flex space-x-2">
                 {githubLink && (
                   <Link href={githubLink} target="_blank">
-                    <GitHub color="#70777f" size={21} />
+                    <GitHub color="#70777f" size={21} aria-label={`Go to ${title}'s Github repository`} />
                   </Link>
                 )}
 
                 {figmaLink && (
                   <Link href={figmaLink} target="_blank">
-                    <Figma color="#70777f" size={21} />
+                    <Figma color="#70777f" size={21} aria-label={`Go to ${title}'s Figma design`} />
                   </Link>
                 )}
 
                 {externalLink && (
                   <Link href={externalLink} target="_blank">
-                    <ExternalLink color="#70777f" size={21} />
+                    <ExternalLink color="#70777f" size={21} aria-label={`Go to ${title}'s URL`} />
                   </Link>
                 )}
               </div>
