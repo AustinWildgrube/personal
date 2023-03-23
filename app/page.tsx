@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
           and enthusiasm would be a valuable asset to your project.
         </p>
 
-        <Link href="/resume.pdf" target="_blank">
+        <Link href="/resume.pdf" target="_blank" prefetch={false}>
           <Button as="span">
             <FeatherLink className="mr-2" size={18} /> View My Resume
           </Button>
