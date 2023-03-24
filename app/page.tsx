@@ -13,6 +13,8 @@ import { SmallFigure } from '&/components/small-figure';
 import { Accordion } from '&/components/ui/accordion';
 import { Button } from '&/components/ui/button';
 
+export const revalidate = 0;
+
 export const metadata = {
   title: 'Austin Wildgrube',
   description:
