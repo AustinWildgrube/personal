@@ -106,6 +106,8 @@ export default function Home(): JSX.Element {
             src="/screenshots/campfire/campfire.png"
             alt="Campfire Design system documentation homepage"
             extraContent={<Campfire />}
+            githubLink="https://github.com/AustinWildgrube/campfire-design-system"
+            externalLink="https://ui.wldgrb.com"
           />
 
           <Figure
