@@ -19,8 +19,6 @@ module.exports = {
     '',
     '^[./]',
   ],
-  importOrderSortSpecifiers: true,
-  importOrderMergeDuplicateImports: true,
-  importOrderCombineTypeAndValueImports: true,
-  plugins: [require('prettier-plugin-tailwindcss'), '@ianvs/prettier-plugin-sort-imports'],
+  importOrderTypeScriptVersion: true,
+  plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports'],
 };

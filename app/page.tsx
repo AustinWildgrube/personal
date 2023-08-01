@@ -18,7 +18,7 @@ export const revalidate = 0;
 export const metadata = {
   title: 'Austin Wildgrube',
   description:
-    'Full-stack developer, cat dad, and husband. Code and cuddles by day, jet-setting and sightseeing by night. Missouri-based, world-inspired.',
+    'Full-stack developer, cat dad, and husband. Code and coffee by day, jet-setting and sightseeing by night. Missouri-based, world-inspired.',
   icons: {
     icon: '/favicon_io/favicon.ico',
   },
@@ -50,7 +50,7 @@ export default function Home(): JSX.Element {
           and enthusiasm would be a valuable asset to your project.
         </p>
 
-        <Link href="https://www.dropbox.com/s/cyox2cw17s2tn1f/resume.pdf" target="_blank" prefetch={false}>
+        <Link href="https://www.dropbox.com/scl/fi/smcttzlidbrv8b9b07g0q/resume.pdf" target="_blank" prefetch={false}>
           <Button as="span">
             <FeatherLink className="mr-2" size={18} /> View My Resume
           </Button>
@@ -106,7 +106,6 @@ export default function Home(): JSX.Element {
             src="/screenshots/campfire/campfire.png"
             alt="Campfire Design system documentation homepage"
             extraContent={<Campfire />}
-            githubLink="https://github.com/AustinWildgrube/campfire-design-system"
             externalLink="https://ui.wldgrb.com"
           />
 
