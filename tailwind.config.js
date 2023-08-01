@@ -4,8 +4,8 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      heading: ['Cal Sans', 'sans-serif'],
-      text: ['Inter', 'serif'],
+      heading: ['var(--font-lausanne)'],
+      text: ['var(--font-inter)'],
     },
     extend: {
       color: {
@@ -27,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: ['tailwindcss-animate'],
 };

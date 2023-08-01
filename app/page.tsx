@@ -83,7 +83,7 @@ export default function Home(): JSX.Element {
       </section>
 
       <section className="py-6 lg:py-20 lg:px-24">
-        <h2 className="mb-20 text-3xl font-bold lg:text-5xl">Featured Work</h2>
+        <h2 className="mb-8 text-3xl font-bold lg:text-4xl">Featured Work</h2>
 
         <Accordion type="single" collapsible>
           <Figure
@@ -167,7 +167,7 @@ export default function Home(): JSX.Element {
       </section>
 
       <section className="py-6 lg:py-20 lg:px-24">
-        <h2 className="mb-8 text-3xl font-bold lg:text-5xl">Other Work</h2>
+        <h2 className="mb-8 text-3xl font-bold lg:text-4xl">Other Work</h2>
 
         <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3">
           <SmallFigure

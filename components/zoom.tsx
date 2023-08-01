@@ -64,7 +64,7 @@ export const Zoom = (props: ImageProps) => {
               </motion.div>
 
               <motion.button
-                className="absolute top-0 right-0 m-4 text-white hover:text-gray-300 focus:outline-none"
+                className="absolute top-0 right-0 m-4 text-white hover:text-slate-300 focus:outline-none"
                 onClick={() => setIsZoomed(false)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

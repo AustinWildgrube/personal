@@ -26,14 +26,14 @@ export function Spotify(): JSX.Element | null {
   if (!data) return null;
 
   return (
-    <div className="fixed bottom-2 right-2 cursor-pointer">
+    <div className="fixed bottom-2 right-2 cursor-pointer z-50">
       {isExpanded && !isLoading && data.isPlaying ? (
         <div
           className="flex h-44 w-80 items-center rounded-2xl border border-[#00000014] bg-[#EDFCF3] p-4 shadow transition-all hover:bg-[#E7F9EE] lg:w-96"
           onClick={() => setIsExpanded(false)}>
           <div className="mr-4 flex w-3/5 grow flex-col justify-between">
             <span className="block flex h-10 w-10 items-center justify-center rounded-lg bg-[#1ed760] shadow">
-              <Image className="h-8 w-8" src={SpotifyLogo} placeholder="blur" alt="Spotify Logo" />
+              <Image className="h-8 w-8" src={SpotifyLogo} alt="Spotify Logo" />
             </span>
 
             <h3 className="mt-2 truncate text-sm font-medium text-black">{data.title}</h3>
@@ -63,7 +63,7 @@ export function Spotify(): JSX.Element | null {
         <div
           className="flex items-center rounded-3xl border border-[#00000014] bg-[#1ed760] py-1.5 px-4 shadow hover:bg-green-600"
           onClick={() => setIsExpanded(true)}>
-          <Image className="h-8 w-8" src={SpotifyLogo} placeholder="blur" alt="Spotify logo" />
+          <Image className="h-8 w-8" src={SpotifyLogo} alt="Spotify logo" />
           <span className="ml-2 select-none text-sm text-black">
             {data.isPlaying ? 'Now Playing..' : 'Not Currently Listening..'}
           </span>
