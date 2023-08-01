@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
@@ -8,12 +8,10 @@ import { GitHub } from 'react-feather';
 
 import { cardVariants } from '&/lib/utils';
 
-interface SmallFigureProps {
+interface SmallFigureProps extends Pick<ImageProps, 'src' | 'alt'> {
   title: string;
   description: string;
   link: string;
-  src: string;
-  alt: string;
 }
 
 export function SmallFigure({ title, description, link, src, alt }: SmallFigureProps): JSX.Element {
@@ -28,9 +26,9 @@ export function SmallFigure({ title, description, link, src, alt }: SmallFigureP
           <Image
             className="mb-4 h-64 rounded-2xl border border-gray-200 object-cover"
             src={src}
+            placeholder="blur"
+            quality={100}
             alt={alt}
-            height={250}
-            width={500}
           />
 
           <h3 className="mr-2 flex items-center justify-center gap-2 text-xl font-semibold">

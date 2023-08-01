@@ -8,6 +8,7 @@ import { PlayCircle } from 'react-feather';
 import useSWR from 'swr';
 
 import fetcher from '&/lib/fetcher';
+import SpotifyLogo from '&/public/screenshots/spotify-logo.png';
 
 interface SpotifyNowPlaying {
   album: string;
@@ -32,7 +33,7 @@ export function Spotify(): JSX.Element | null {
           onClick={() => setIsExpanded(false)}>
           <div className="mr-4 flex w-3/5 grow flex-col justify-between">
             <span className="block flex h-10 w-10 items-center justify-center rounded-lg bg-[#1ed760] shadow">
-              <Image src="/screenshots/spotify-logo.png" height={32} width={32} alt="Spotify Logo" />
+              <Image className="h-8 w-8" src={SpotifyLogo} placeholder="blur" alt="Spotify Logo" />
             </span>
 
             <h3 className="mt-2 truncate text-sm font-medium text-black">{data.title}</h3>
@@ -48,14 +49,21 @@ export function Spotify(): JSX.Element | null {
           </div>
 
           <div className="relative h-32 w-32 shrink-0">
-            <Image className="rounded-lg" src={data.albumImageUrl} alt={`${data.title} album art`} fill />
+            <Image
+              className="rounded-lg"
+              src={data.albumImageUrl}
+              placeholder="blur"
+              blurDataURL="LEHLk~WB2yk8pyo0adR*.7kCMdnj"
+              alt={`${data.title} album art`}
+              fill
+            />
           </div>
         </div>
       ) : (
         <div
           className="flex items-center rounded-3xl border border-[#00000014] bg-[#1ed760] py-1.5 px-4 shadow hover:bg-green-600"
           onClick={() => setIsExpanded(true)}>
-          <Image src="/screenshots/spotify-logo.png" height={32} width={32} alt="Spotify logo" />
+          <Image className="h-8 w-8" src={SpotifyLogo} placeholder="blur" alt="Spotify logo" />
           <span className="ml-2 select-none text-sm text-black">
             {data.isPlaying ? 'Now Playing..' : 'Not Currently Listening..'}
           </span>

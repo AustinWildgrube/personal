@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode, useState } from 'react';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
@@ -10,15 +10,14 @@ import { ChevronDown, ExternalLink, Figma, GitHub } from 'react-feather';
 import { AccordionContent, AccordionItem, AccordionTrigger } from '&/components/ui/accordion';
 import { Badge } from '&/components/ui/badge';
 import { cardVariants, cn } from '&/lib/utils';
+import PrizeRibbon from '&/public/prize-ribbon.png';
 
-interface FigureProps {
+interface FigureProps extends Pick<ImageProps, 'src' | 'alt'> {
   title: string;
   description: string;
   technologies: string[];
   dates: string;
   type: 'personal' | 'work';
-  src: string;
-  alt: string;
   extraContent: ReactNode;
   figmaLink?: string;
   githubLink?: string;
@@ -98,21 +97,15 @@ export function Figure({
 
             <div className="relative">
               <Image
-                className="h-64 rounded-2xl border border-gray-200 object-cover object-right-top"
+                className="h-64 w-96 rounded-2xl border border-gray-200 object-cover object-right-top"
                 src={src}
-                height={242}
-                width={368}
+                placeholder="blur"
+                quality={100}
                 alt={alt}
               />
 
               {title === 'Venuelytics' && (
-                <Image
-                  className="absolute -top-6 -left-10"
-                  src="/prize-ribbon.png"
-                  height={100}
-                  width={100}
-                  alt={alt}
-                />
+                <Image className="absolute -top-6 -left-10 w-24 h-24" src={PrizeRibbon} alt={alt} />
               )}
             </div>
           </AccordionTrigger>

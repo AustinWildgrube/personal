@@ -12,6 +12,13 @@ import { Figure } from '&/components/figure';
 import { SmallFigure } from '&/components/small-figure';
 import { Accordion } from '&/components/ui/accordion';
 import { Button } from '&/components/ui/button';
+import CampfireImage from '&/public/screenshots/campfire/campfire.png';
+import RaverBotImage from '&/public/screenshots/discord-logo.webp';
+import EnfrontImage from '&/public/screenshots/enfront/enfront.png';
+import ForgeImage from '&/public/screenshots/forge/forge.png';
+import FSCodeImage from '&/public/screenshots/fs-code.png';
+import TravelryImage from '&/public/screenshots/travelry/travelry.png';
+import VenuelyticsImage from '&/public/screenshots/venuelytics/venuelytics.png';
 
 export const revalidate = 0;
 
@@ -64,7 +71,7 @@ export default function Home(): JSX.Element {
                   className="rounded-2xl border border-gray-200"
                   src={`/gallery/${num}.webp`}
                   height={200}
-                  width={200}
+                  width={150}
                   alt={`Photo of my life #${i}`}
                 />
               </div>
@@ -88,7 +95,7 @@ export default function Home(): JSX.Element {
             technologies={['React Native', 'Supabase', 'Mapbox']}
             dates="January 2022 - Present"
             type="personal"
-            src="/screenshots/travelry/travelry.png"
+            src={TravelryImage}
             alt="Travelry app screenshots"
             extraContent={<Travelry />}
             githubLink="https://github.com/AustinWildgrube/travelry"
@@ -103,7 +110,7 @@ export default function Home(): JSX.Element {
             technologies={['Angular', 'Karma', 'Storybook']}
             dates="July 2021 - Present"
             type="work"
-            src="/screenshots/campfire/campfire.png"
+            src={CampfireImage}
             alt="Campfire Design system documentation homepage"
             extraContent={<Campfire />}
             externalLink="https://ui.wldgrb.com"
@@ -119,7 +126,7 @@ export default function Home(): JSX.Element {
             technologies={['Next.js', 'Mantine', 'Django', 'Django Rest Framework', 'Postgres', 'Docker', 'Liquid']}
             dates="August 2022 - February 2023"
             type="personal"
-            src="/screenshots/enfront/enfront.png"
+            src={EnfrontImage}
             alt="Enfront dashboard screenshot"
             extraContent={<Enfront />}
             githubLink="https://github.com/Enfront"
@@ -135,7 +142,7 @@ export default function Home(): JSX.Element {
             technologies={['Angular', 'Supabase', 'Mapbox', 'Tailwind', 'Chart.js']}
             dates="December 2022 - January 2023"
             type="work"
-            src="/screenshots/venuelytics/venuelytics.png"
+            src={VenuelyticsImage}
             alt="Venuelytics dashboard screenshot"
             extraContent={<Venuelytics />}
           />
@@ -149,7 +156,7 @@ export default function Home(): JSX.Element {
             technologies={['HTML', 'CSS', 'JS']}
             dates="June 2021 - August 2021"
             type="work"
-            src="/screenshots/forge/forge.png"
+            src={ForgeImage}
             alt="Screenshot of The Forge landing page"
             extraContent={<Forge />}
             githubLink="https://github.com/AustinWildgrube/forge"
@@ -168,7 +175,7 @@ export default function Home(): JSX.Element {
             description="Raver the Discord role saver keeps a server pain-free by storing user roles in a database so you'll never have to spend time
             reassigning them!"
             link="https://github.com/AustinWildgrube/raverbot"
-            src="/screenshots/discord-logo.webp"
+            src={RaverBotImage}
             alt="Discord logo"
           />
 
@@ -176,7 +183,7 @@ export default function Home(): JSX.Element {
             title="FS Personal Language"
             description="During my senior year of college, I was assigned to create a programming language using C++ as one of my final projects."
             link="https://github.com/AustinWildgrube/4280_P4"
-            src="/screenshots/fs-code.png"
+            src={FSCodeImage}
             alt="Code from my personal language"
           />
         </div>

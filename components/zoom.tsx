@@ -26,11 +26,11 @@ export const Zoom = (props: ImageProps) => {
   return (
     <div className="relative">
       <Image
-        className="h-64 rounded-2xl border border-gray-200 object-cover"
+        className="h-64 w-96 rounded-2xl border border-gray-200 object-cover"
         onClick={() => setIsZoomed(true)}
         src={props.src}
-        height={242}
-        width={368}
+        placeholder={props.placeholder}
+        quality={100}
         alt={props.alt}
       />
 
@@ -56,6 +56,8 @@ export const Zoom = (props: ImageProps) => {
                 <Image
                   className="absolute top-0 left-0 h-screen w-screen cursor-zoom-out rounded object-contain"
                   src={props.src}
+                  placeholder={props.placeholder}
+                  quality={100}
                   alt={props.alt}
                   fill
                 />

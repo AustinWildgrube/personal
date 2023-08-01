@@ -1,4 +1,5 @@
 import { Zoom } from '&/components/zoom';
+import VenuelyticsMap from '&/public/screenshots/venuelytics/venuelytics-map.png';
 
 export default function Venuelytics(): JSX.Element {
   return (
@@ -48,7 +49,7 @@ export default function Venuelytics(): JSX.Element {
 
       <div className="flex flex-col gap-4">
         <figure className="cursor-zoom-in">
-          <Zoom src="/screenshots/venuelytics/venuelytics-map.png" alt="Lower half of Venulytics dashboard" />
+          <Zoom src={VenuelyticsMap} placeholder="blur" alt="Lower half of Venulytics dashboard" />
           <figcaption className="mt-2 text-center">Lower Half of The Dashboard</figcaption>
         </figure>
       </div>

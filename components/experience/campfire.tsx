@@ -1,4 +1,5 @@
 import { Zoom } from '&/components/zoom';
+import CampfireShowcase from '&/public/screenshots/campfire/campfire-showcase.jpg';
 
 export default function Campfire(): JSX.Element {
   return (
@@ -60,7 +61,7 @@ export default function Campfire(): JSX.Element {
 
       <div className="flex flex-col justify-between">
         <figure className="cursor-zoom-in">
-          <Zoom src="/screenshots/campfire/campfire-showcase.jpg" alt="Campfire presentation image" />
+          <Zoom src={CampfireShowcase} placeholder="blur" alt="Campfire presentation image" />
           <figcaption className="mt-2 text-center">Campfire Presentation Image</figcaption>
         </figure>
       </div>

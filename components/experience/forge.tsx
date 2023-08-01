@@ -1,4 +1,6 @@
 import { Zoom } from '&/components/zoom';
+import ForgeBranding from '&/public/screenshots/forge/forge-branding.png';
+import ForgeWork from '&/public/screenshots/forge/forge-work.png';
 
 export default function TheForge(): JSX.Element {
   return (
@@ -52,12 +54,12 @@ export default function TheForge(): JSX.Element {
 
       <div className="flex flex-col gap-4">
         <figure className="cursor-zoom-in">
-          <Zoom src="/screenshots/forge/forge-work.png" alt="The work page on The Forge Media website" />
+          <Zoom src={ForgeWork} placeholder="blur" alt="The work page on The Forge Media website" />
           <figcaption className="mt-2 text-center">The Forge Media Work Page</figcaption>
         </figure>
 
         <figure className="cursor-zoom-in">
-          <Zoom src="/screenshots/forge/forge-branding.png" alt="The Forge Media brand book" />
+          <Zoom src={ForgeBranding} placeholder="blur" alt="The Forge Media brand book" />
           <figcaption className="mt-2 text-center">The Forge Media Band Book</figcaption>
         </figure>
       </div>

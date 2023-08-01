@@ -1,4 +1,7 @@
 import { Zoom } from '&/components/zoom';
+import EnfrontArchitecture from '&/public/screenshots/enfront/enfront-architecture.png';
+import EnfrontGradient from '&/public/screenshots/enfront/enfront-gradient.png';
+import EnfrontTheme from '&/public/screenshots/enfront/enfront-theme.png';
 
 export default function Enfront(): JSX.Element {
   return (
@@ -56,20 +59,17 @@ export default function Enfront(): JSX.Element {
 
       <div className="flex flex-col gap-4">
         <figure className="cursor-zoom-in">
-          <Zoom src="/screenshots/enfront/enfront-gradient.png" alt="The Enfront logo on a gradient background" />
+          <Zoom src={EnfrontGradient} placeholder="blur" alt="The Enfront logo on a gradient background" />
           <figcaption className="mt-2 text-center">Enfront Logo</figcaption>
         </figure>
 
         <figure className="cursor-zoom-in">
-          <Zoom
-            src="/screenshots/enfront/enfront-architecture.png"
-            alt="An Excalidraw image of Enfront's architecture"
-          />
+          <Zoom src={EnfrontArchitecture} placeholder="blur" alt="An Excalidraw image of Enfront's architecture" />
           <figcaption className="mt-2 text-center">Enfront&apos;s Fullstack Architecture</figcaption>
         </figure>
 
         <figure className="cursor-zoom-in">
-          <Zoom src="/screenshots/enfront/enfront-theme.png" alt="The Enfront default shop theme" />
+          <Zoom src={EnfrontTheme} placeholder="blur" alt="The Enfront default shop theme" />
           <figcaption className="mt-2 text-center">Enfront&apos;s Default Shop Theme</figcaption>
         </figure>
       </div>
